@@ -1,5 +1,20 @@
+// Import collection
 import { Meteor } from 'meteor/meteor';
+import { TasksCollection } from '/imports/api/TasksCollection';
 
+const insertTask = taskText => TasksCollection.insert({ text: taskText });
+ 
 Meteor.startup(() => {
-  // code to run on server at startup
+  // If there is data in the collection, populate it. Otherwise, insert sample data.
+  if (TasksCollection.find().count() === 0) {
+    [
+      'First Task',
+      'Second Task',
+      'Third Task',
+      'Fourth Task',
+      'Fifth Task',
+      'Sixth Task',
+      'Seventh Task'
+    ].forEach(insertTask)
+  }
 });
