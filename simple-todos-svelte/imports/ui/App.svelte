@@ -1,9 +1,10 @@
 <script>
   import Task from './Task.svelte';
   import { TasksCollection } from '../api/TasksCollection';
+  import TaskForm from './TaskForm.svelte';
 
-  // Retrieve tasks
-  $m: tasks = TasksCollection.find({}).fetch()
+  // Retrieve tasks dynamically
+  $m: tasks = TasksCollection.find({}, { sort: { createdAt: -1 } }).fetch()
 </script>
 
 
@@ -11,6 +12,9 @@
   <header>
       <h1>Todo List</h1>
   </header>
+
+  <!-- Use TaskForm object to have submittable tasks -->
+  <TaskForm />
 
   <!-- Populate list with all tasks -->
   <ul>
