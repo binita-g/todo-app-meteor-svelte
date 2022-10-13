@@ -16,6 +16,7 @@
     }
 </script>
 
+<!-- Form to add new tasks -->
 <form class="task-form" on:submit|preventDefault={handleSubmit}>
     <input
             type="text"
@@ -23,5 +24,7 @@
             placeholder="Type to add new tasks"
             bind:value={newTask}
     />
+    
+    <!-- Submit button -->
     <button type="submit">Add Task</button>
 </form>

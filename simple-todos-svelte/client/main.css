@@ -1,4 +1,5 @@
 body {
+  /* Style body and background color */
   font-family: sans-serif;
   background-color: #315481;
   background-image: linear-gradient(to bottom, #315481, #918e82 100%);
@@ -16,6 +17,7 @@ body {
   font-size: 14px;
 }
 
+/* Style buttons */
 button {
   font-weight: bold;
   font-size: 1em;
@@ -30,12 +32,14 @@ button:focus {
   outline: 0;
 }
 
+/* Use flexbox to style list items */
 .app {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
+/* Style header at the top of the list */
 .app-header {
   flex-grow: 1;
   white-space: nowrap;
@@ -57,6 +61,7 @@ button:focus {
   background: inherit;
 }
 
+/* Style header */
 header {
   background: #d2edf4;
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
@@ -82,6 +87,7 @@ header {
   margin: 16px;
 }
 
+/* Style task input */
 .task-form > input {
   flex-grow: 1;
   box-sizing: border-box;
@@ -103,6 +109,7 @@ header {
   background-color: #315481;
 }
 
+/* Style task list items */
 .tasks {
   list-style-type: none;
   padding-inline-start: 0;
@@ -127,6 +134,7 @@ header {
   background-color: #ff3046;
 }
 
+/* Style filter buttons */
 .filter {
   display: flex;
   justify-content: center;
